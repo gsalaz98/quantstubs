@@ -1,0 +1,15 @@
+Difficulties faced in research
+
+  * Excessive memory usage causes kernel to crash, leading to slow development time
+  * Lack of caching data causes reboots to lose progress.
+  * Inability to clearly remove equities/securities becomes troublesome when working with multiple assets
+  * Enumerating the universe of all tickers is near impossible for end users, unless they know about `LocalDiskMapFileProvider` et. al.
+  * Lack of universe selection in research makes selecting candidates for searchable assets take a long time to do manually
+  * Lack of custom data universe selection as part of the universe selection pipeline is missing, making joining data incredibly hard
+  * Data is not garbage collected frequently, eventually leading to the collapse of the research notebook
+  * Inability to query backend database (MySQL, Postgres, Spark) to join data efficiently vs. manually joining. Added benefit of offloading memory and compute resources to external host
+  * No database/data source exists for metadata of assets, such as SIC, ISIN, CUSIP, etc.
+  * Using data sources in conjunction with each other is incredibly difficult
+  * Map files data is incomplete. Unique edge cases exist with missing data. Might be a QQ issue
+  * Certain assets do not handle switching over to new assets correctly
+  * Cherry on top: no opt-in collaborative notebooks
